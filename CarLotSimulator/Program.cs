@@ -8,19 +8,51 @@ namespace CarLotSimulator
         {
             //TODO
 
-            //Create a seperate class file called Car
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
-            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
-            //The methods should take one string parameter: the respective noise property            
+            //Create a seperate class file called Car - done
+            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable - done
+            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise() - done
+            //The methods should take one string parameter: the respective noise property - done           
+
+            //Now that the Car class is created we can instanciate 3 new cars - done
+            //Set the properties for each of the cars - done
+            //Call each of the methods for each car - done
 
 
-            //Now that the Car class is created we can instanciate 3 new cars
-            //Set the properties for each of the cars
-            //Call each of the methods for each car
+            var myCar = new Car();
 
-            //*************BONUS*************//
+            // Version 1: DOT NOTATION
+            myCar.Make = "Honda";
+            myCar.Model = "Civic";
+            myCar.Year = 2014;
+            myCar.EngineNoise = "vroom";
+            myCar.HonkNoise = "honk";
+            myCar.IsDriveable = true;
 
-            // Set the properties utilizing the 3 different ways we learned about, one way for each car
+
+            var parkersCar = new Car()
+            {
+                //Version 2: OBJECT INITIALIZER SYNTAX
+                Make = "Mazda",
+                Model = "3",
+                Year = 2014,
+                EngineNoise = "vroom vroom",
+                HonkNoise = "beep",
+                IsDriveable = true
+            };
+
+            //Version 3: (USING THE CONSTRUCTOR TO ALLOW PARAMETER VALUES TO BE PLACED INSIDE PROPERTIES)
+            var dollysCar = new Car("Mustang", "Viper", 2019, "VRROOM", "HONK", true);
+
+
+            //calling the methods
+            parkersCar.MakeEngineNoise($"Parker's car goes {parkersCar.EngineNoise},");
+
+            dollysCar.MakeEngineNoise($"Dolly's car goes {dollysCar.EngineNoise}.");
+
+            parkersCar.MakeHonkNoise(parkersCar.HonkNoise);
+
+            dollysCar.MakeHonkNoise(dollysCar.HonkNoise);
+
 
             //*************BONUS X 2*************//
 
